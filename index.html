@@ -19,7 +19,7 @@
       overflow-x: hidden;
     }
 
-    /* HERO IMERSIVO */
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -30,10 +30,14 @@
       padding: 60px 20px;
     }
 
+    /* LOGO */
     .logo-wrapper {
       position: relative;
       max-width: 90vw;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: scale(0.92);
+      animation: logoIn 1.8s ease forwards;
     }
 
     .logo-wrapper::after {
@@ -43,7 +47,7 @@
       background: radial-gradient(
         circle at center,
         rgba(0,0,0,0) 40%,
-        rgba(0,0,0,0.55) 100%
+        rgba(0,0,0,0.6) 100%
       );
       pointer-events: none;
     }
@@ -52,17 +56,23 @@
       max-width: 900px;
       width: 100%;
       height: auto;
-      filter: drop-shadow(0 35px 70px rgba(0,0,0,0.95));
+      filter: drop-shadow(0 40px 80px rgba(0,0,0,0.95));
     }
 
+    /* TEXTO */
     .hero-text {
       max-width: 900px;
       font-size: 1.35rem;
       line-height: 1.8;
-      margin-bottom: 55px;
+      margin-bottom: 50px;
       color: #f0f0f0;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: textIn 1.2s ease forwards;
+      animation-delay: 1.6s;
     }
 
+    /* BOTÃO */
     .btn {
       display: inline-block;
       background: linear-gradient(135deg, #f0d57a, #d4af37);
@@ -74,11 +84,37 @@
       font-size: 1.1rem;
       transition: 0.3s ease;
       box-shadow: 0 16px 40px rgba(0,0,0,0.75);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: btnIn 1s ease forwards;
+      animation-delay: 2.2s;
     }
 
     .btn:hover {
       transform: translateY(-4px);
       box-shadow: 0 22px 55px rgba(0,0,0,0.95);
+    }
+
+    /* ANIMAÇÕES */
+    @keyframes logoIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes textIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes btnIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* MOBILE */
