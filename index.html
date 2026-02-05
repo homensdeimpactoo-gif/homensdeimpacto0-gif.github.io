@@ -5,7 +5,6 @@
   <title>Homens de Impacto</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
@@ -17,7 +16,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top, #0e3550, #02070c 70%);
+      background: linear-gradient(to bottom, #061a28, #02070c);
       color: #ffffff;
       overflow-x: hidden;
     }
@@ -28,109 +27,86 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 80px 20px;
-      position: relative;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at center, rgba(0,0,0,0.3), rgba(0,0,0,0.85));
-      z-index: 1;
+      padding: 60px 20px;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
       text-align: center;
-      max-width: 1100px;
-      animation: fadeUp 1.8s ease forwards;
+      max-width: 1200px;
     }
 
     .hero-content img {
       width: 100%;
-      max-width: 950px;
-      margin-bottom: 50px;
-      filter: drop-shadow(0 50px 120px rgba(0,0,0,0.95));
+      max-width: 1000px;
+      margin-bottom: 35px;
     }
 
     .hero-content p {
-      font-size: 1.45rem;
-      line-height: 1.9;
+      font-size: 1.4rem;
+      line-height: 1.8;
       color: #f1f1f1;
-      margin-bottom: 60px;
+      margin-bottom: 45px;
     }
 
     .btn {
       display: inline-block;
-      padding: 18px 64px;
-      font-size: 1.1rem;
+      padding: 16px 60px;
+      font-size: 1.05rem;
       font-weight: 600;
-      border-radius: 12px;
+      border-radius: 10px;
       text-decoration: none;
       color: #111;
       background: linear-gradient(135deg, #f2d98c, #d4af37);
-      box-shadow: 0 20px 55px rgba(0,0,0,0.85);
       transition: all 0.3s ease;
     }
 
     .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 28px 75px rgba(0,0,0,0.95);
+      transform: translateY(-3px);
+      opacity: 0.95;
     }
 
-    /* SEÇÃO */
+    /* SEÇÕES */
     section {
-      padding: 130px 20px;
-      position: relative;
+      padding: 90px 20px;
+      text-align: center;
     }
 
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
+      font-size: 2.3rem;
       color: #f2d98c;
-      margin-bottom: 60px;
-      text-align: center;
+      margin-bottom: 45px;
     }
 
     /* VERSÍCULO */
-    .versiculo {
-      background: linear-gradient(to bottom, #02070c, #02070c);
-      text-align: center;
-    }
-
     .versiculo blockquote {
       max-width: 900px;
       margin: 0 auto;
-      font-size: 1.9rem;
-      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
       line-height: 1.8;
       color: #f2d98c;
+      font-family: 'Playfair Display', serif;
     }
 
     .versiculo span {
       display: block;
-      margin-top: 25px;
-      font-size: 1.1rem;
-      color: #cfcfcf;
+      margin-top: 20px;
+      font-size: 1.05rem;
+      color: #cccccc;
       font-family: 'Inter', sans-serif;
     }
 
     /* EVENTO */
     .evento {
-      background: radial-gradient(circle at top, #081c2a, #02070c 70%);
-      text-align: center;
+      background: linear-gradient(to bottom, #061a28, #02070c);
     }
 
     .cartaz {
-      max-width: 430px;
-      margin: 0 auto 60px;
-      border-radius: 18px;
+      max-width: 420px;
+      margin: 0 auto 40px;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 35px 90px rgba(0,0,0,0.95);
-      border: 1px solid rgba(212,175,55,0.35);
-      animation: fadeUp 1.6s ease forwards;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.85);
     }
 
     .cartaz img {
@@ -139,30 +115,18 @@
     }
 
     .evento-info {
-      font-size: 1.3rem;
-      line-height: 2.1;
-      color: #e5e5e5;
+      font-size: 1.25rem;
+      line-height: 2;
+      color: #e2e2e2;
     }
 
     /* FOOTER */
     footer {
-      padding: 50px 20px;
+      padding: 35px 20px;
       text-align: center;
       font-size: 0.95rem;
       background: #02070c;
       color: #bdbdbd;
-    }
-
-    /* ANIMAÇÕES */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     /* MOBILE */
@@ -172,7 +136,7 @@
       }
 
       .section-title {
-        font-size: 2rem;
+        font-size: 1.9rem;
       }
 
       .versiculo blockquote {
