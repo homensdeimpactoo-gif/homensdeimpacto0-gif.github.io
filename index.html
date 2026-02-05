@@ -27,41 +27,25 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
     .logo-wrapper {
-      position: relative;
       max-width: 90vw;
       margin-bottom: 40px;
-      opacity: 0;
-      transform: scale(0.88);
-      animation: logoIn 2.2s ease forwards;
     }
 
-    .logo-wrapper::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(
-        circle at center,
-        rgba(0,0,0,0) 45%,
-        rgba(0,0,0,0.65) 100%
-      );
-      pointer-events: none;
-    }
-
-    .logo-full {
+    .logo-wrapper img {
       max-width: 900px;
       width: 100%;
-      filter: drop-shadow(0 45px 90px rgba(0,0,0,0.95));
+      filter: drop-shadow(0 40px 80px rgba(0,0,0,0.9));
     }
 
     .hero-text {
       max-width: 900px;
       font-size: 1.35rem;
       line-height: 1.8;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       color: #f0f0f0;
     }
 
@@ -110,31 +94,43 @@
     /* EVENTO */
     .evento {
       padding: 120px 20px;
+      background: #02070c;
       text-align: center;
     }
 
     .evento h2 {
       font-size: 2.4rem;
       color: #f0d57a;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+    }
+
+    .cartaz {
+      max-width: 420px;
+      margin: 0 auto 60px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.9);
+      border: 1px solid rgba(212,175,55,0.35);
+    }
+
+    .cartaz img {
+      width: 100%;
+      display: block;
     }
 
     .evento-info {
       font-size: 1.3rem;
       line-height: 2;
-      margin-bottom: 50px;
       color: #e0e0e0;
+      margin-bottom: 50px;
     }
 
-    /* QR CODE */
-    .qr {
-      margin-top: 40px;
-    }
-
+    /* QR */
     .qr img {
       background: #fff;
-      padding: 15px;
+      padding: 14px;
       border-radius: 12px;
+      margin-top: 20px;
     }
 
     footer {
@@ -149,10 +145,10 @@
       .versiculo blockquote {
         font-size: 1.4rem;
       }
-    }
 
-    @keyframes logoIn {
-      to { opacity: 1; transform: scale(1); }
+      .evento h2 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
@@ -162,7 +158,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="logo-wrapper">
-      <img src="logo-homens-de-impacto.png" alt="Homens de Impacto" class="logo-full">
+      <img src="logo-homens-de-impacto.png" alt="Homens de Impacto">
     </div>
 
     <p class="hero-text">
@@ -170,7 +166,7 @@
       caráter e autoridade, transformando famílias, igrejas e a sociedade.
     </p>
 
-    <a href="#evento" class="btn">Ver Detalhes do Evento</a>
+    <a href="#evento" class="btn">Ver Evento</a>
   </section>
 
   <!-- VERSÍCULO -->
@@ -183,21 +179,22 @@
 
   <!-- EVENTO -->
   <section class="evento" id="evento">
-    <h2>Encontro Homens de Impacto</h2>
+    <h2>Primeiro Encontro Homens de Impacto</h2>
+
+    <div class="cartaz">
+      <img src="cartaz-evento.jpg" alt="Cartaz do Evento Homens de Impacto">
+    </div>
 
     <div class="evento-info">
       <p>📅 28 de fevereiro de 2026</p>
       <p>⏰ A partir das 19:00</p>
       <p>📍 Av. Monteiro Lobato, 1283 – Guarulhos/SP</p>
+      <p>🎤 Pres.: Jair Cordeiro</p>
     </div>
 
-    <!-- QR CODE -->
     <div class="qr">
-      <p>📲 Aponte a câmera para acessar o site</p><br>
-      <img 
-        src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://homensdeimpacto0-gif.github.io"
-        alt="QR Code Homens de Impacto"
-      >
+      <p>📲 Aponte a câmera para acessar o site</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://homensdeimpacto0-gif.github.io">
     </div>
   </section>
 
