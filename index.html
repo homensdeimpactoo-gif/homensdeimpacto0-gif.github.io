@@ -16,10 +16,10 @@
     body {
       background: radial-gradient(circle at center, #0b2d45, #02070c);
       color: #ffffff;
-      overflow-x: hidden; /* libera scroll vertical */
+      overflow-x: hidden;
     }
 
-    /* HERO IMERSIVO */
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -30,7 +30,6 @@
       padding: 60px 20px;
     }
 
-    /* LOGO */
     .logo-wrapper {
       position: relative;
       max-width: 90vw;
@@ -55,11 +54,9 @@
     .logo-full {
       max-width: 900px;
       width: 100%;
-      height: auto;
       filter: drop-shadow(0 45px 90px rgba(0,0,0,0.95));
     }
 
-    /* TEXTO */
     .hero-text {
       max-width: 900px;
       font-size: 1.35rem;
@@ -72,7 +69,6 @@
       animation-delay: 2.6s;
     }
 
-    /* BOTÃO */
     .btn {
       display: inline-block;
       background: linear-gradient(135deg, #f0d57a, #d4af37);
@@ -95,47 +91,62 @@
       box-shadow: 0 24px 60px rgba(0,0,0,0.95);
     }
 
+    /* EVENTO */
+    .evento {
+      padding: 120px 20px;
+      background: #02070c;
+      text-align: center;
+    }
+
+    .evento h2 {
+      font-size: 2.4rem;
+      color: #f0d57a;
+      margin-bottom: 40px;
+    }
+
+    .evento-box {
+      max-width: 900px;
+      margin: 0 auto;
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 18px;
+      padding: 50px 30px;
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.85);
+    }
+
+    .evento-info {
+      font-size: 1.3rem;
+      line-height: 2;
+      margin-bottom: 45px;
+      color: #e0e0e0;
+    }
+
+    .evento-info span {
+      color: #f0d57a;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      background: #02070c;
+      color: #bdbdbd;
+    }
+
     /* ANIMAÇÕES */
     @keyframes logoIn {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      to { opacity: 1; transform: scale(1); }
     }
 
     @keyframes textIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes btnIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* SEÇÃO ABAIXO */
-    .section {
-      padding: 100px 20px;
-      text-align: center;
-      background: #02070c;
-    }
-
-    .section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-      color: #f0d57a;
-    }
-
-    .section p {
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #dcdcdc;
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* MOBILE */
@@ -148,8 +159,12 @@
         font-size: 1.15rem;
       }
 
-      .section h2 {
-        font-size: 1.8rem;
+      .evento h2 {
+        font-size: 2rem;
+      }
+
+      .evento-info {
+        font-size: 1.15rem;
       }
     }
   </style>
@@ -160,11 +175,7 @@
   <!-- HERO -->
   <section class="hero">
     <div class="logo-wrapper">
-      <img 
-        src="logo-homens-de-impacto.png" 
-        alt="Homens de Impacto"
-        class="logo-full"
-      >
+      <img src="logo-homens-de-impacto.png" alt="Homens de Impacto" class="logo-full">
     </div>
 
     <p class="hero-text">
@@ -172,18 +183,34 @@
       caráter e autoridade, transformando famílias, igrejas e a sociedade.
     </p>
 
-    <a href="#proposito" class="btn">Quero Participar</a>
+    <a href="#evento" class="btn">Ver Detalhes do Evento</a>
   </section>
 
-  <!-- SEÇÃO ABAIXO -->
-  <section class="section" id="proposito">
-    <h2>Nosso Propósito</h2>
-    <p>
-      O Homens de Impacto nasceu para despertar, fortalecer e alinhar homens
-      ao chamado de Deus, formando líderes espirituais que influenciam suas
-      famílias, igrejas e a sociedade com caráter, verdade e autoridade.
-    </p>
+  <!-- EVENTO -->
+  <section class="evento" id="evento">
+    <h2>Encontro Homens de Impacto</h2>
+
+    <div class="evento-box">
+      <div class="evento-info">
+        <p>📅 <span>Data:</span> A definir</p>
+        <p>⏰ <span>Horário:</span> A definir</p>
+        <p>📍 <span>Local:</span> A definir</p>
+      </div>
+
+      <a 
+        href="https://wa.me/5500000000000" 
+        target="_blank" 
+        class="btn"
+      >
+        Falar no WhatsApp
+      </a>
+    </div>
   </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Igreja As Nações Para Cristo • Ministério Homens de Impacto
+  </footer>
 
 </body>
 </html>
