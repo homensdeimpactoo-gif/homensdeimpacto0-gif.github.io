@@ -14,9 +14,9 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #0b2d45, #02070c);
+      background: radial-gradient(circle at center, #0b2d45, #02070c);
       color: #ffffff;
-      overflow-x: hidden;
+      overflow: hidden;
     }
 
     /* HERO */
@@ -36,8 +36,8 @@
       max-width: 90vw;
       margin-bottom: 40px;
       opacity: 0;
-      transform: scale(0.92);
-      animation: logoIn 1.8s ease forwards;
+      transform: scale(0.88);
+      animation: logoIn 2.2s ease forwards;
     }
 
     .logo-wrapper::after {
@@ -46,8 +46,8 @@
       inset: 0;
       background: radial-gradient(
         circle at center,
-        rgba(0,0,0,0) 40%,
-        rgba(0,0,0,0.6) 100%
+        rgba(0,0,0,0) 45%,
+        rgba(0,0,0,0.65) 100%
       );
       pointer-events: none;
     }
@@ -56,7 +56,7 @@
       max-width: 900px;
       width: 100%;
       height: auto;
-      filter: drop-shadow(0 40px 80px rgba(0,0,0,0.95));
+      filter: drop-shadow(0 45px 90px rgba(0,0,0,0.95));
     }
 
     /* TEXTO */
@@ -67,9 +67,9 @@
       margin-bottom: 50px;
       color: #f0f0f0;
       opacity: 0;
-      transform: translateY(25px);
-      animation: textIn 1.2s ease forwards;
-      animation-delay: 1.6s;
+      transform: translateY(30px);
+      animation: textIn 1.4s ease forwards;
+      animation-delay: 2.6s;
     }
 
     /* BOTÃO */
@@ -77,22 +77,22 @@
       display: inline-block;
       background: linear-gradient(135deg, #f0d57a, #d4af37);
       color: #000;
-      padding: 18px 56px;
+      padding: 18px 58px;
       border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
-      transition: 0.3s ease;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.75);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.8);
       opacity: 0;
-      transform: translateY(20px);
-      animation: btnIn 1s ease forwards;
-      animation-delay: 2.2s;
+      transform: translateY(25px);
+      animation: btnIn 1.2s ease forwards;
+      animation-delay: 3.4s;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
       transform: translateY(-4px);
-      box-shadow: 0 22px 55px rgba(0,0,0,0.95);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.95);
     }
 
     /* ANIMAÇÕES */
@@ -136,7 +136,7 @@
     <div class="logo-wrapper">
       <img 
         src="logo-homens-de-impacto.png" 
-        alt="Homens de Impacto" 
+        alt="Homens de Impacto"
         class="logo-full"
       >
     </div>
