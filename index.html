@@ -21,18 +21,38 @@
       overflow-x: hidden;
     }
 
-    /* HERO SOMENTE IMAGEM */
+    /* HERO */
     .hero {
       width: 100%;
       height: 70vh;
       background: url("hero-homens-impacto.png") center center / cover no-repeat;
     }
 
-    /* BLOCO DE TEXTO */
+    /* INTRO COM ANIMAÇÃO */
     .intro {
       background: linear-gradient(to bottom, #02070c, #061a28);
       padding: 90px 20px;
       text-align: center;
+      overflow: hidden;
+    }
+
+    .intro-text,
+    .intro-btn {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .intro.show .intro-text {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.3s;
+    }
+
+    .intro.show .intro-btn {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.8s;
     }
 
     .intro-text {
@@ -150,14 +170,16 @@
   <!-- HERO -->
   <div class="hero"></div>
 
-  <!-- TEXTO E CTA -->
-  <section class="intro">
+  <!-- INTRO COM ANIMAÇÃO -->
+  <section class="intro" id="intro">
     <p class="intro-text">
       Homens despertados por Deus para viver com propósito, caráter e autoridade,
       transformando famílias, igrejas e a sociedade.
     </p>
 
-    <a href="#evento" class="btn">Ver Evento</a>
+    <div class="intro-btn">
+      <a href="#evento" class="btn">Ver Evento</a>
+    </div>
   </section>
 
   <!-- VERSÍCULO -->
@@ -188,6 +210,13 @@
   <footer>
     Igreja As Nações Para Cristo
   </footer>
+
+  <!-- SCRIPT DA ANIMAÇÃO -->
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("intro").classList.add("show");
+    });
+  </script>
 
 </body>
 </html>
