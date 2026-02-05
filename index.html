@@ -16,10 +16,10 @@
     body {
       background: radial-gradient(circle at center, #0b2d45, #02070c);
       color: #ffffff;
-      overflow: hidden;
+      overflow-x: hidden; /* libera scroll vertical */
     }
 
-    /* HERO */
+    /* HERO IMERSIVO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -117,6 +117,27 @@
       }
     }
 
+    /* SEÇÃO ABAIXO */
+    .section {
+      padding: 100px 20px;
+      text-align: center;
+      background: #02070c;
+    }
+
+    .section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #f0d57a;
+    }
+
+    .section p {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #dcdcdc;
+    }
+
     /* MOBILE */
     @media (max-width: 768px) {
       .logo-full {
@@ -126,12 +147,17 @@
       .hero-text {
         font-size: 1.15rem;
       }
+
+      .section h2 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="logo-wrapper">
       <img 
@@ -146,7 +172,17 @@
       caráter e autoridade, transformando famílias, igrejas e a sociedade.
     </p>
 
-    <a href="#inscricao" class="btn">Quero Participar</a>
+    <a href="#proposito" class="btn">Quero Participar</a>
+  </section>
+
+  <!-- SEÇÃO ABAIXO -->
+  <section class="section" id="proposito">
+    <h2>Nosso Propósito</h2>
+    <p>
+      O Homens de Impacto nasceu para despertar, fortalecer e alinhar homens
+      ao chamado de Deus, formando líderes espirituais que influenciam suas
+      famílias, igrejas e a sociedade com caráter, verdade e autoridade.
+    </p>
   </section>
 
 </body>
