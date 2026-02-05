@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homens de Impacto</title>
 
   <style>
@@ -27,22 +27,24 @@
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
-      background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
-      color: var(--branco);
+      background: linear-gradient(135deg, #081e2f, #0f3f63);
       text-align: center;
-      padding: 90px 20px;
+      padding: 80px 20px 90px;
+      color: var(--branco);
     }
 
-    header h1 {
-      font-size: 3rem;
-      color: var(--dourado);
-      margin-bottom: 15px;
+    .logo {
+      max-width: 420px;
+      width: 100%;
+      margin: 0 auto 30px;
+      display: block;
     }
 
     header p {
-      max-width: 700px;
-      margin: 0 auto 30px;
+      max-width: 780px;
+      margin: 0 auto 35px;
       font-size: 1.2rem;
     }
 
@@ -50,7 +52,7 @@
       display: inline-block;
       background: var(--dourado);
       color: #000;
-      padding: 15px 32px;
+      padding: 15px 36px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
@@ -61,6 +63,7 @@
       background: #b8962e;
     }
 
+    /* SEÇÕES */
     section {
       padding: 70px 20px;
       max-width: 1100px;
@@ -106,12 +109,33 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
+    /* FOOTER */
     footer {
-      background: var(--azul-escuro);
+      background: #081e2f;
       color: var(--branco);
       text-align: center;
-      padding: 30px 20px;
+      padding: 45px 20px;
+    }
+
+    footer img {
+      max-width: 220px;
+      margin-bottom: 15px;
+      opacity: 0.95;
+    }
+
+    footer p {
       font-size: 0.9rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .logo {
+        max-width: 300px;
+      }
+
+      header p {
+        font-size: 1.05rem;
+      }
     }
   </style>
 </head>
@@ -120,11 +144,13 @@
 
   <!-- HERO -->
   <header>
-    <h1>Homens de Impacto</h1>
+    <img src="logo-homens-de-impacto.png" alt="Homens de Impacto" class="logo">
+
     <p>
-      Homens posicionados em Deus para transformar famílias,
-      igrejas e a sociedade através de uma fé viva e prática.
+      <strong>Homens despertados por Deus</strong> para viver com propósito,
+      caráter e autoridade, transformando famílias, igrejas e a sociedade.
     </p>
+
     <a href="#inscricao" class="btn">Quero Participar</a>
   </header>
 
@@ -138,21 +164,21 @@
       <div class="card">
         <h3>Identidade</h3>
         <p>
-          Resgatar a identidade do homem segundo o coração de Deus.
+          Restaurar a identidade do homem segundo os princípios do Reino de Deus.
         </p>
       </div>
 
       <div class="card">
         <h3>Caráter</h3>
         <p>
-          Formar homens íntegros, responsáveis e comprometidos com a verdade.
+          Formar homens íntegros, firmes na fé, no caráter e nas decisões.
         </p>
       </div>
 
       <div class="card">
         <h3>Impacto</h3>
         <p>
-          Gerar transformação real na família, na igreja e na sociedade.
+          Gerar transformação real dentro de casa, na igreja e na sociedade.
         </p>
       </div>
     </div>
@@ -173,9 +199,9 @@
 
       <div>
         <p>
-          Um encontro preparado para homens que desejam crescer
-          espiritualmente, assumir seu papel com responsabilidade
-          e viver uma fé que gera resultados.
+          O <strong>Homens de Impacto</strong> é um encontro preparado para homens
+          que desejam crescer espiritualmente, alinhar sua vida com Deus
+          e assumir seu papel como líderes no lar, na igreja e na sociedade.
         </p>
       </div>
     </div>
@@ -200,7 +226,8 @@
 
   <!-- RODAPÉ -->
   <footer>
-    Igreja As Nações Para Cristo • Ministério Homens de Impacto
+    <img src="logo-homens-de-impacto.png" alt="Homens de Impacto">
+    <p>Igreja As Nações Para Cristo • Ministério Homens de Impacto</p>
   </footer>
 
 </body>
