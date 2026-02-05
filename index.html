@@ -79,10 +79,6 @@
       font-weight: bold;
       font-size: 1.1rem;
       box-shadow: 0 18px 45px rgba(0,0,0,0.8);
-      opacity: 0;
-      transform: translateY(25px);
-      animation: btnIn 1.2s ease forwards;
-      animation-delay: 3.4s;
       transition: 0.3s ease;
     }
 
@@ -105,8 +101,8 @@
     }
 
     .evento-box {
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 950px;
+      margin: 0 auto 70px;
       border: 1px solid rgba(212,175,55,0.35);
       border-radius: 18px;
       padding: 50px 30px;
@@ -118,13 +114,29 @@
     .evento-info {
       font-size: 1.3rem;
       line-height: 2;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
       color: #e0e0e0;
     }
 
     .evento-info span {
       color: #f0d57a;
       font-weight: bold;
+    }
+
+    /* MAPA */
+    .mapa {
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.85);
+      border: 1px solid rgba(212,175,55,0.25);
+    }
+
+    .mapa iframe {
+      width: 100%;
+      height: 420px;
+      border: 0;
     }
 
     footer {
@@ -144,10 +156,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes btnIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     /* MOBILE */
     @media (max-width: 768px) {
       .logo-full {
@@ -164,6 +172,10 @@
 
       .evento-info {
         font-size: 1.15rem;
+      }
+
+      .mapa iframe {
+        height: 300px;
       }
     }
   </style>
@@ -193,16 +205,19 @@
       <div class="evento-info">
         <p>📅 <span>Data:</span> 28 de fevereiro de 2026</p>
         <p>⏰ <span>Horário:</span> a partir das 19:00</p>
-        <p>📍 <span>Local:</span> Av. Monteiro Lobato, 1283</p>
+        <p>📍 <span>Local:</span> Av. Monteiro Lobato, 1283 – Guarulhos/SP</p>
       </div>
 
-      <a 
-        href="https://wa.me/5500000000000" 
-        target="_blank" 
-        class="btn"
-      >
-        Falar no WhatsApp
-      </a>
+      <a href="#" class="btn">Inscrições em breve</a>
+    </div>
+
+    <!-- MAPA -->
+    <div class="mapa">
+      <iframe 
+        src="https://www.google.com/maps?q=Av.%20Monteiro%20Lobato,%201283%20Guarulhos%20SP&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </section>
 
