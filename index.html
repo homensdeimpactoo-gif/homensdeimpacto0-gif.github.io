@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Homens de Impacto</title>
+
+  <style>
+    :root {
+      --azul-escuro: #0b2d45;
+      --azul: #114e78;
+      --dourado: #d4af37;
+      --cinza: #f4f4f4;
+      --branco: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--cinza);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+      color: var(--branco);
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--dourado);
+      margin-bottom: 15px;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--dourado);
+      color: #000;
+      padding: 15px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #b8962e;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .titulo h2 {
+      color: var(--azul);
+      font-size: 2.2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--branco);
+      padding: 35px 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      color: var(--azul);
+      margin-bottom: 15px;
+    }
+
+    .evento {
+      background: var(--branco);
+      padding: 40px;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header>
+    <h1>Homens de Impacto</h1>
+    <p>
+      Homens posicionados em Deus para transformar famílias,
+      igrejas e a sociedade através de uma fé viva e prática.
+    </p>
+    <a href="#inscricao" class="btn">Quero Participar</a>
+  </header>
+
+  <!-- PROPÓSITO -->
+  <section>
+    <div class="titulo">
+      <h2>Nosso Propósito</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Identidade</h3>
+        <p>
+          Resgatar a identidade do homem segundo o coração de Deus.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Caráter</h3>
+        <p>
+          Formar homens íntegros, responsáveis e comprometidos com a verdade.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Impacto</h3>
+        <p>
+          Gerar transformação real na família, na igreja e na sociedade.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTO -->
+  <section>
+    <div class="titulo">
+      <h2>Sobre o Encontro</h2>
+    </div>
+
+    <div class="evento">
+      <div>
+        <p><strong>📍 Local:</strong> A definir</p><br>
+        <p><strong>📅 Data:</strong> A definir</p><br>
+        <p><strong>⏰ Horário:</strong> A definir</p>
+      </div>
+
+      <div>
+        <p>
+          Um encontro preparado para homens que desejam crescer
+          espiritualmente, assumir seu papel com responsabilidade
+          e viver uma fé que gera resultados.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSCRIÇÃO -->
+  <section id="inscricao">
+    <div class="titulo">
+      <h2>Inscreva-se</h2>
+    </div>
+
+    <p style="text-align:center; max-width:600px; margin:0 auto 30px;">
+      Clique no botão abaixo e fale diretamente conosco pelo WhatsApp.
+    </p>
+
+    <div style="text-align:center;">
+      <a class="btn" href="https://wa.me/5500000000000" target="_blank">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    Igreja As Nações Para Cristo • Ministério Homens de Impacto
+  </footer>
+
+</body>
+</html>
