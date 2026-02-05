@@ -14,8 +14,8 @@
     }
 
     body {
-      background: #050e16;
-      color: #fff;
+      background: radial-gradient(circle at top, #0b2d45, #02070c);
+      color: #ffffff;
     }
 
     /* HERO */
@@ -24,57 +24,57 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(circle at top, #0b2d45, #02070c);
       padding: 40px 20px;
     }
 
-    .hero-card {
-      max-width: 900px;
+    .hero-content {
+      max-width: 860px;
       width: 100%;
-      background: rgba(0,0,0,0.55);
-      border: 2px solid rgba(212,175,55,0.35);
-      border-radius: 20px;
-      padding: 60px 40px;
       text-align: center;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.9);
+      padding: 40px 20px;
     }
 
-    .hero-card img {
+    .logo {
       max-width: 300px;
       width: 100%;
       margin-bottom: 35px;
-      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.9));
+      filter: drop-shadow(0 18px 35px rgba(0,0,0,0.85));
     }
 
-    .hero-card p {
+    .hero-content p {
       font-size: 1.3rem;
       line-height: 1.7;
       margin-bottom: 45px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .btn {
       display: inline-block;
       background: linear-gradient(135deg, #f0d57a, #d4af37);
       color: #000;
-      padding: 18px 48px;
-      border-radius: 10px;
+      padding: 16px 44px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     }
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.8);
     }
 
+    /* MOBILE */
     @media (max-width: 600px) {
-      .hero-card {
-        padding: 45px 25px;
+      .logo {
+        max-width: 240px;
       }
 
-      .hero-card p {
+      .hero-content p {
         font-size: 1.15rem;
       }
     }
@@ -84,15 +84,15 @@
 <body>
 
   <section class="hero">
-    <div class="hero-card">
-      <img src="logo-homens-de-impacto.png" alt="Homens de Impacto">
+    <div class="hero-content">
+      <img src="logo-homens-de-impacto.png" alt="Homens de Impacto" class="logo">
 
       <p>
         <strong>Homens despertados por Deus</strong> para viver com propósito,
         caráter e autoridade, transformando famílias, igrejas e a sociedade.
       </p>
 
-      <a href="#" class="btn">Quero Participar</a>
+      <a href="#inscricao" class="btn">Quero Participar</a>
     </div>
   </section>
 
