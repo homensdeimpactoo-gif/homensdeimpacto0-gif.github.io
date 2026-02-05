@@ -144,10 +144,14 @@
       color: #bdbdbd;
     }
 
-    /* MOBILE */
+    /* 🔥 AJUSTE MOBILE (AQUI ESTÁ A SOLUÇÃO) */
     @media (max-width: 768px) {
       .hero {
-        height: 55vh;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        background-size: contain;
+        background-position: center top;
+        background-color: #02070c;
       }
 
       .intro-text {
@@ -170,7 +174,7 @@
   <!-- HERO -->
   <div class="hero"></div>
 
-  <!-- INTRO COM ANIMAÇÃO -->
+  <!-- INTRO -->
   <section class="intro" id="intro">
     <p class="intro-text">
       Homens despertados por Deus para viver com propósito, caráter e autoridade,
@@ -211,7 +215,7 @@
     Igreja As Nações Para Cristo
   </footer>
 
-  <!-- SCRIPT DA ANIMAÇÃO -->
+  <!-- SCRIPT ANIMAÇÃO -->
   <script>
     window.addEventListener("load", () => {
       document.getElementById("intro").classList.add("show");
