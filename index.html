@@ -5,7 +5,7 @@
   <title>Homens de Impacto</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -16,7 +16,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #02070c;
+      background: linear-gradient(to bottom, #02070c, #061a28);
       color: #ffffff;
       overflow-x: hidden;
       scroll-behavior: smooth;
@@ -24,30 +24,52 @@
 
     /* HERO */
     .hero {
-      width: 100%;
-      height: 70vh;
-      background: url("hero-homens-impacto.png") center center / cover no-repeat;
+      position: relative;
+      height: 85vh;
+      background: url("hero-homens-impacto.png") center / cover no-repeat;
     }
 
-    /* INTRO */
-    .intro {
-      background: linear-gradient(to bottom, #02070c, #061a28);
-      padding: 90px 20px;
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(2,7,12,0.35),
+        rgba(2,7,12,0.9)
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 20px;
     }
 
-    .intro-text {
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.5rem;
-      line-height: 1.8;
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      color: #f2d98c;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      max-width: 750px;
+      font-size: 1.35rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
       color: #f2f2f2;
     }
 
-    /* BOTÃO – MICROINTERAÇÃO */
+    /* BOTÃO */
     .btn {
       display: inline-block;
-      margin-top: 45px;
       padding: 16px 60px;
       font-size: 1.05rem;
       font-weight: 600;
@@ -84,7 +106,6 @@
       box-shadow: 0 20px 55px rgba(0,0,0,0.85);
     }
 
-    /* SEÇÕES */
     section {
       padding: 100px 20px;
       text-align: center;
@@ -94,24 +115,47 @@
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
       color: #f2d98c;
-      margin-bottom: 45px;
+      margin-bottom: 60px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    /* VERSÍCULO */
-    .versiculo blockquote {
-      max-width: 900px;
+    /* PARA QUEM É */
+    .publico {
+      background: #02070c;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
       margin: 0 auto;
-      font-size: 1.6rem;
-      line-height: 1.8;
-      color: #f2d98c;
-      font-family: 'Playfair Display', serif;
     }
 
-    .versiculo span {
+    .card {
+      background: linear-gradient(to bottom, #061a28, #02070c);
+      padding: 35px 25px;
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.6);
+      transition: all 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.9);
+    }
+
+    .card span {
+      font-size: 2rem;
       display: block;
-      margin-top: 18px;
-      font-size: 1.05rem;
-      color: #cccccc;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #e2e2e2;
     }
 
     /* EVENTO */
@@ -142,9 +186,10 @@
       font-size: 1.25rem;
       line-height: 2;
       color: #e2e2e2;
+      margin-bottom: 45px;
     }
 
-    /* SCROLL ANIMATION */
+    /* REVEAL */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -166,24 +211,12 @@
 
     /* MOBILE */
     @media (max-width: 768px) {
-      .hero {
-        height: auto;
-        aspect-ratio: 16 / 9;
-        background-size: contain;
-        background-position: center top;
-        background-color: #02070c;
+      .hero-content h1 {
+        font-size: 2.4rem;
       }
 
-      .intro-text {
-        font-size: 1.25rem;
-      }
-
-      .section-title {
-        font-size: 1.9rem;
-      }
-
-      .versiculo blockquote {
-        font-size: 1.4rem;
+      .hero-content p {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -192,25 +225,42 @@
 <body>
 
   <!-- HERO -->
-  <div class="hero"></div>
+  <div class="hero">
+    <div class="hero-content reveal">
+      <h1>Homens de Impacto</h1>
+      <p>
+        Homens despertados por Deus para viver com propósito, caráter e autoridade,
+        transformando famílias, igrejas e a sociedade.
+      </p>
+      <a href="#evento" class="btn">Quero Participar</a>
+    </div>
+  </div>
 
-  <!-- INTRO -->
-  <section class="intro reveal">
-    <p class="intro-text">
-      Homens despertados por Deus para viver com propósito, caráter e autoridade,
-      transformando famílias, igrejas e a sociedade.
-    </p>
+  <!-- PARA QUEM É -->
+  <section class="publico reveal">
+    <h2 class="section-title">Para Quem É</h2>
 
-    <a href="#evento" class="btn">Ver Evento</a>
-  </section>
+    <div class="cards">
+      <div class="card">
+        <span>👨‍👩‍👧‍👦</span>
+        <p>Homens que desejam fortalecer sua família e liderar com amor e responsabilidade.</p>
+      </div>
 
-  <!-- VERSÍCULO -->
-  <section class="versiculo reveal">
-    <h2 class="section-title">Versículo Tema</h2>
-    <blockquote>
-      “O povo que conhece ao seu Deus se tornará forte e fará grandes feitos.”
-      <span>Daniel 11:32</span>
-    </blockquote>
+      <div class="card">
+        <span>✝️</span>
+        <p>Homens que querem crescer espiritualmente e aprofundar sua caminhada com Deus.</p>
+      </div>
+
+      <div class="card">
+        <span>💼</span>
+        <p>Homens que buscam viver propósito e integridade no trabalho e na sociedade.</p>
+      </div>
+
+      <div class="card">
+        <span>🔥</span>
+        <p>Homens que entendem que foram chamados para fazer parte de algo maior.</p>
+      </div>
+    </div>
   </section>
 
   <!-- EVENTO -->
@@ -218,7 +268,7 @@
     <h2 class="section-title">Primeiro Encontro</h2>
 
     <div class="cartaz">
-      <img src="cartaz-evento.png" alt="Cartaz do Evento">
+      <img src="cartaz-evento.png" alt="Cartaz do Evento Homens de Impacto">
     </div>
 
     <div class="evento-info">
@@ -227,13 +277,15 @@
       <p>📍 Av. Monteiro Lobato, 1283 – Guarulhos/SP</p>
       <p>🎤 Pres.: Jair Cordeiro</p>
     </div>
+
+    <a href="#" class="btn">Solicitar Entrada no Grupo</a>
   </section>
 
   <footer>
     Igreja As Nações Para Cristo
   </footer>
 
-  <!-- SCRIPT SCROLL REVEAL -->
+  <!-- SCRIPT -->
   <script>
     const reveals = document.querySelectorAll(".reveal");
 
@@ -241,6 +293,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("show");
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.15 });
