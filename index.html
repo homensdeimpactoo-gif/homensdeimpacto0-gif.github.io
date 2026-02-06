@@ -58,6 +58,7 @@
       font-size: 3.2rem;
       color: #f2d98c;
       margin-bottom: 20px;
+      text-shadow: 0 6px 25px rgba(0,0,0,0.6);
     }
 
     .hero-content p {
@@ -66,6 +67,7 @@
       line-height: 1.6;
       margin-bottom: 40px;
       color: #f2f2f2;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.55);
     }
 
     /* BOTÃO */
@@ -78,6 +80,7 @@
       background: linear-gradient(135deg, #f2d98c, #d4af37);
       box-shadow: 0 12px 35px rgba(0,0,0,0.6);
       transition: 0.3s;
+      display: inline-block;
     }
 
     .btn:hover {
@@ -94,58 +97,60 @@
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
       color: #f2d98c;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    /* ACCORDION */
-    .accordion {
-      max-width: 900px;
+    /* CARDS CLICÁVEIS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
       margin: 0 auto;
-      text-align: left;
     }
 
-    .accordion-item {
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .accordion-header {
+    .card {
+      background: linear-gradient(to bottom, #081f30, #02070c);
+      padding: 35px 25px;
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.6);
+      transition: all 0.4s ease;
       cursor: pointer;
-      padding: 22px 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1.2rem;
-      font-weight: 500;
-      transition: color 0.3s;
+      text-align: center;
     }
 
-    .accordion-header:hover {
-      color: #f2d98c;
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.9);
     }
 
-    .accordion-header span {
-      font-size: 1.5rem;
-      transition: transform 0.3s;
+    .card span {
+      font-size: 2.3rem;
+      display: block;
+      margin-bottom: 15px;
     }
 
-    .accordion-content {
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .card .card-text {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.5s ease;
-      font-size: 1.05rem;
-      line-height: 1.7;
+      transition: max-height 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      font-size: 1rem;
+      line-height: 1.6;
       color: #dcdcdc;
-      padding: 0 10px;
     }
 
-    .accordion-item.active .accordion-content {
-      max-height: 300px;
-      padding-bottom: 25px;
-    }
-
-    .accordion-item.active .accordion-header span {
-      transform: rotate(45deg);
+    .card.active .card-text {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 15px;
     }
 
     /* EVENTO */
@@ -153,11 +158,37 @@
       background: linear-gradient(to bottom, #061a28, #02070c);
     }
 
+    .cartaz {
+      max-width: 420px;
+      margin: 0 auto 40px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.7);
+      transition: 0.4s;
+    }
+
+    .cartaz:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.95);
+    }
+
+    .cartaz img {
+      width: 100%;
+      display: block;
+    }
+
+    .evento-info {
+      font-size: 1.25rem;
+      line-height: 2;
+      color: #e2e2e2;
+      margin-bottom: 40px;
+    }
+
     footer {
-      padding: 30px;
+      padding: 35px 20px;
       background: #02070c;
-      color: #aaa;
-      font-size: 0.9rem;
+      color: #bdbdbd;
+      font-size: 0.95rem;
     }
 
     /* MOBILE */
@@ -172,11 +203,11 @@
 
       .hero-content {
         justify-content: flex-end;
-        padding-bottom: 60px;
+        padding-bottom: 70px;
         background: linear-gradient(
           to top,
           rgba(2,7,12,0.85),
-          rgba(2,7,12,0.2),
+          rgba(2,7,12,0.3),
           transparent
         );
       }
@@ -210,53 +241,61 @@
   <section id="proposito">
     <h2 class="section-title">Nosso Propósito</h2>
 
-    <div class="accordion">
-
-      <div class="accordion-item">
-        <div class="accordion-header">
-          Fortalecer família e liderança
-          <span>+</span>
-        </div>
-        <div class="accordion-content">
-          O Homens de Impacto existe para levantar homens que lideram primeiro dentro de casa,
+    <div class="cards">
+      <div class="card">
+        <span>👨‍👩‍👧‍👦</span>
+        <h3>Fortalecer família e liderança</h3>
+        <div class="card-text">
+          O Homens de Impacto levanta homens que lideram primeiro dentro de casa,
           assumindo responsabilidade espiritual, emocional e moral sobre sua família.
         </div>
       </div>
 
-      <div class="accordion-item">
-        <div class="accordion-header">
-          Crescimento espiritual e propósito
-          <span>+</span>
-        </div>
-        <div class="accordion-content">
-          Nosso foco é despertar homens para uma caminhada sólida com Deus,
+      <div class="card">
+        <span>✝️</span>
+        <h3>Crescimento espiritual e propósito</h3>
+        <div class="card-text">
+          Despertamos homens para uma caminhada profunda com Deus,
           entendendo identidade, chamado e propósito no Reino.
         </div>
       </div>
 
-      <div class="accordion-item">
-        <div class="accordion-header">
-          Integridade na vida e no trabalho
-          <span>+</span>
-        </div>
-        <div class="accordion-content">
-          Acreditamos em homens íntegros, que vivem os mesmos valores no altar,
-          em casa e no ambiente profissional.
+      <div class="card">
+        <span>💼</span>
+        <h3>Integridade na vida e no trabalho</h3>
+        <div class="card-text">
+          Acreditamos em homens íntegros, que vivem os mesmos valores
+          no altar, em casa e no ambiente profissional.
         </div>
       </div>
 
-      <div class="accordion-item">
-        <div class="accordion-header">
-          Homens chamados para algo maior
-          <span>+</span>
-        </div>
-        <div class="accordion-content">
-          O projeto desperta homens para entender que suas vidas fazem parte
-          de algo maior do que si mesmos: o propósito eterno de Deus.
+      <div class="card">
+        <span>🔥</span>
+        <h3>Homens chamados para algo maior</h3>
+        <div class="card-text">
+          O projeto desperta homens para entender que suas vidas
+          fazem parte de algo maior do que si mesmos.
         </div>
       </div>
-
     </div>
+  </section>
+
+  <!-- EVENTO -->
+  <section class="evento" id="evento">
+    <h2 class="section-title">Primeiro Encontro</h2>
+
+    <div class="cartaz">
+      <img src="cartaz-evento.png" alt="Cartaz do Evento Homens de Impacto">
+    </div>
+
+    <div class="evento-info">
+      <p>📅 28 de fevereiro de 2026</p>
+      <p>⏰ A partir das 19:00</p>
+      <p>📍 Av. Monteiro Lobato, 1283 – Guarulhos/SP</p>
+      <p>🎤 Pres.: Jair Cordeiro</p>
+    </div>
+
+    <a href="#" class="btn">Solicitar Entrada no Grupo</a>
   </section>
 
   <footer>
@@ -264,11 +303,11 @@
   </footer>
 
   <script>
-    const items = document.querySelectorAll('.accordion-item');
+    const cards = document.querySelectorAll('.card');
 
-    items.forEach(item => {
-      item.querySelector('.accordion-header').addEventListener('click', () => {
-        item.classList.toggle('active');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('active');
       });
     });
   </script>
