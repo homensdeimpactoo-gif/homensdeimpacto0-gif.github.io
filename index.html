@@ -16,7 +16,9 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #02070c, #061a28);
+      background:
+        radial-gradient(circle at top, #0b2a3f 0%, transparent 55%),
+        linear-gradient(to bottom, #02070c, #061a28, #02070c);
       color: #ffffff;
       overflow-x: hidden;
       scroll-behavior: smooth;
@@ -36,7 +38,7 @@
       background: linear-gradient(
         to bottom,
         rgba(2,7,12,0.45),
-        rgba(2,7,12,0.9)
+        rgba(2,7,12,0.92)
       );
     }
 
@@ -124,7 +126,7 @@
 
     /* PARA QUEM É */
     .publico {
-      background: #02070c;
+      background: linear-gradient(to bottom, #02070c, #02070c);
     }
 
     .cards {
@@ -136,7 +138,7 @@
     }
 
     .card {
-      background: linear-gradient(to bottom, #061a28, #02070c);
+      background: linear-gradient(to bottom, #081f30, #02070c);
       padding: 35px 25px;
       border-radius: 14px;
       box-shadow: 0 18px 45px rgba(0,0,0,0.6);
@@ -191,18 +193,6 @@
       margin-bottom: 45px;
     }
 
-    /* REVEAL */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     footer {
       padding: 35px 20px;
       text-align: center;
@@ -211,7 +201,7 @@
       color: #bdbdbd;
     }
 
-    /* MOBILE – LEGIBILIDADE GARANTIDA */
+    /* MOBILE */
     @media (max-width: 768px) {
 
       .hero {
@@ -249,19 +239,14 @@
       .hero-content p {
         font-size: 1.15rem;
       }
-
-      .btn {
-        padding: 16px 50px;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
   <div class="hero">
-    <div class="hero-content reveal">
+    <div class="hero-content">
       <h1>Homens de Impacto</h1>
       <p>
         Homens despertados por Deus para viver com propósito, caráter e autoridade,
@@ -271,39 +256,22 @@
     </div>
   </div>
 
-  <!-- PARA QUEM É -->
-  <section class="publico reveal">
+  <section class="publico">
     <h2 class="section-title">Para Quem É</h2>
 
     <div class="cards">
-      <div class="card">
-        <span>👨‍👩‍👧‍👦</span>
-        <p>Homens que desejam fortalecer sua família e liderar com amor e responsabilidade.</p>
-      </div>
-
-      <div class="card">
-        <span>✝️</span>
-        <p>Homens que querem crescer espiritualmente e aprofundar sua caminhada com Deus.</p>
-      </div>
-
-      <div class="card">
-        <span>💼</span>
-        <p>Homens que buscam viver propósito e integridade no trabalho e na sociedade.</p>
-      </div>
-
-      <div class="card">
-        <span>🔥</span>
-        <p>Homens que entendem que foram chamados para fazer parte de algo maior.</p>
-      </div>
+      <div class="card"><span>👨‍👩‍👧‍👦</span><p>Fortalecer família e liderança.</p></div>
+      <div class="card"><span>✝️</span><p>Crescimento espiritual e propósito.</p></div>
+      <div class="card"><span>💼</span><p>Integridade na vida e no trabalho.</p></div>
+      <div class="card"><span>🔥</span><p>Homens chamados para algo maior.</p></div>
     </div>
   </section>
 
-  <!-- EVENTO -->
-  <section class="evento reveal" id="evento">
+  <section class="evento" id="evento">
     <h2 class="section-title">Primeiro Encontro</h2>
 
     <div class="cartaz">
-      <img src="cartaz-evento.png" alt="Cartaz do Evento Homens de Impacto">
+      <img src="cartaz-evento.png" alt="Cartaz do Evento">
     </div>
 
     <div class="evento-info">
@@ -319,21 +287,6 @@
   <footer>
     Igreja As Nações Para Cristo
   </footer>
-
-  <script>
-    const reveals = document.querySelectorAll(".reveal");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    reveals.forEach(el => observer.observe(el));
-  </script>
 
 </body>
 </html>
