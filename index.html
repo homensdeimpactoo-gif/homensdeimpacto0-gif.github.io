@@ -22,7 +22,7 @@
         header h1 {
             margin: 0;
             font-size: 32px;
-            color: #d4af37; /* dourado */
+            color: #d4af37;
         }
 
         header p {
@@ -42,12 +42,17 @@
             border-radius: 12px;
             padding: 25px;
             box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            text-align: center;
         }
 
         .radio-box h2 {
             margin-top: 0;
             color: #d4af37;
-            text-align: center;
+        }
+
+        audio {
+            width: 100%;
+            margin: 15px 0;
         }
 
         footer {
@@ -68,21 +73,17 @@
         <p>Homens chamados para algo maior</p>
     </header>
 
-    <!-- SEÇÃO DA RÁDIO -->
+    <!-- RÁDIO -->
     <section>
         <div class="radio-box">
             <h2>🎙️ Rádio Laços de Fé FM</h2>
 
-            <iframe 
-                src="https://radiolacosdefefm.siteweb.net.br/player.html"
-                width="100%" 
-                height="150" 
-                frameborder="0" 
-                scrolling="no"
-                allow="autoplay">
-            </iframe>
+            <audio controls preload="none">
+                <source src="https://radiolacosdefefm.siteweb.net.br/stream" type="audio/mpeg">
+                Seu navegador não suporta rádio ao vivo.
+            </audio>
 
-            <p style="text-align:center; margin-top:15px;">
+            <p>
                 Palavra, louvor e conteúdo que fortalecem homens de fé.
             </p>
         </div>
