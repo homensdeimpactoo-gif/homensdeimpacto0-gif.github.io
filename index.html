@@ -52,7 +52,17 @@
 
         audio {
             width: 100%;
-            margin: 15px 0;
+            margin: 20px 0;
+        }
+
+        .fallback {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .fallback a {
+            color: #d4af37;
+            text-decoration: underline;
         }
 
         footer {
@@ -67,32 +77,35 @@
 
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <h1>Homens de Impacto</h1>
-        <p>Homens chamados para algo maior</p>
-    </header>
+<header>
+    <h1>Homens de Impacto</h1>
+    <p>Homens chamados para algo maior</p>
+</header>
 
-    <!-- RÁDIO -->
-    <section>
-        <div class="radio-box">
-            <h2>🎙️ Rádio Laços de Fé FM</h2>
+<section>
+    <div class="radio-box">
+        <h2>🎙️ Rádio Laços de Fé FM</h2>
 
-            <audio controls preload="none">
-                <source src="https://radiolacosdefefm.siteweb.net.br/stream" type="audio/mpeg">
-                Seu navegador não suporta rádio ao vivo.
-            </audio>
+        <audio controls preload="none">
+            <source src="https://radiolacosdefefm.siteweb.net.br/stream.mp3" type="audio/mpeg">
+            <source src="https://radiolacosdefefm.siteweb.net.br/;stream.mp3" type="audio/mpeg">
+            Seu navegador não suporta rádio ao vivo.
+        </audio>
 
-            <p>
-                Palavra, louvor e conteúdo que fortalecem homens de fé.
-            </p>
+        <div class="fallback">
+            Se não tocar, <a href="https://radiolacosdefefm.siteweb.net.br/" target="_blank">
+            clique aqui para ouvir diretamente no site da rádio</a>.
         </div>
-    </section>
 
-    <!-- RODAPÉ -->
-    <footer>
-        © 2026 – Projeto Homens de Impacto • Todos os direitos reservados
-    </footer>
+        <p style="margin-top:15px;">
+            Palavra, louvor e conteúdo que fortalecem homens de fé.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 – Projeto Homens de Impacto • Todos os direitos reservados
+</footer>
 
 </body>
 </html>
