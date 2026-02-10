@@ -70,7 +70,6 @@
       text-shadow: 0 4px 20px rgba(0,0,0,0.55);
     }
 
-    /* BOTÃO (mantido só no hero) */
     .btn {
       padding: 16px 60px;
       border-radius: 10px;
@@ -102,7 +101,7 @@
       letter-spacing: 1px;
     }
 
-    /* CARDS CLICÁVEIS */
+    /* CARDS */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -152,6 +151,27 @@
       margin-top: 15px;
     }
 
+    /* RÁDIO */
+    .radio {
+      background: linear-gradient(to bottom, #061a28, #02070c);
+    }
+
+    .radio-box {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 30px;
+      border-radius: 16px;
+      background: linear-gradient(to bottom, #081f30, #02070c);
+      box-shadow: 0 20px 55px rgba(0,0,0,0.7);
+    }
+
+    .radio-box h3 {
+      font-family: 'Playfair Display', serif;
+      color: #f2d98c;
+      margin-bottom: 25px;
+      font-size: 1.6rem;
+    }
+
     /* EVENTO */
     .evento {
       background: linear-gradient(to bottom, #061a28, #02070c);
@@ -188,35 +208,12 @@
       background: #02070c;
       color: #bdbdbd;
       font-size: 0.95rem;
+      text-align: center;
     }
 
-    /* MOBILE */
     @media (max-width: 768px) {
-      .hero {
-        height: auto;
-        min-height: 100vh;
-        background-size: contain;
-        background-position: center top;
-        background-repeat: no-repeat;
-      }
-
-      .hero-content {
-        justify-content: flex-end;
-        padding-bottom: 70px;
-        background: linear-gradient(
-          to top,
-          rgba(2,7,12,0.85),
-          rgba(2,7,12,0.3),
-          transparent
-        );
-      }
-
       .hero-content h1 {
         font-size: 2.2rem;
-      }
-
-      .hero-content p {
-        font-size: 1.15rem;
       }
     }
   </style>
@@ -245,8 +242,7 @@
         <span>👨‍👩‍👧‍👦</span>
         <h3>Fortalecer família e liderança</h3>
         <div class="card-text">
-          O Homens de Impacto levanta homens que lideram primeiro dentro de casa,
-          assumindo responsabilidade espiritual, emocional e moral sobre sua família.
+          O Homens de Impacto levanta homens que lideram primeiro dentro de casa.
         </div>
       </div>
 
@@ -254,8 +250,7 @@
         <span>✝️</span>
         <h3>Crescimento espiritual e propósito</h3>
         <div class="card-text">
-          Despertamos homens para uma caminhada profunda com Deus,
-          entendendo identidade, chamado e propósito no Reino.
+          Uma caminhada profunda com Deus, entendendo identidade e chamado.
         </div>
       </div>
 
@@ -263,8 +258,7 @@
         <span>💼</span>
         <h3>Integridade na vida e no trabalho</h3>
         <div class="card-text">
-          Acreditamos em homens íntegros, que vivem os mesmos valores
-          no altar, em casa e no ambiente profissional.
+          Homens íntegros no altar, em casa e no ambiente profissional.
         </div>
       </div>
 
@@ -272,10 +266,31 @@
         <span>🔥</span>
         <h3>Homens chamados para algo maior</h3>
         <div class="card-text">
-          O projeto desperta homens para entender que suas vidas
-          fazem parte de algo maior do que si mesmos.
+          Uma geração despertada para deixar legado.
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- RÁDIO -->
+  <section class="radio">
+    <h2 class="section-title">Rádio</h2>
+
+    <div class="radio-box">
+      <h3>🎙️ Rádio Laços de Fé FM</h3>
+
+      <iframe 
+        src="https://radiolacosdefefm.siteweb.net.br/player.html"
+        width="100%" 
+        height="180" 
+        frameborder="0" 
+        scrolling="no"
+        allow="autoplay">
+      </iframe>
+
+      <p style="margin-top:15px; font-size:14px; opacity:0.8;">
+        Em alguns navegadores, clique no play dentro do player para ouvir.
+      </p>
     </div>
   </section>
 
@@ -301,7 +316,6 @@
 
   <script>
     const cards = document.querySelectorAll('.card');
-
     cards.forEach(card => {
       card.addEventListener('click', () => {
         card.classList.toggle('active');
