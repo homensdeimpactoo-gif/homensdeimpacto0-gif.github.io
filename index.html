@@ -2,58 +2,66 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homens de Impacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #0b1c2d;
+            background: linear-gradient(180deg, #061423, #0b1c2d);
             color: #ffffff;
         }
 
         header {
-            background: linear-gradient(90deg, #0b1c2d, #132f4c);
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
+            background: linear-gradient(90deg, #0b1c2d, #133a5e);
         }
 
         header h1 {
             margin: 0;
-            font-size: 32px;
-            color: #d4af37; /* dourado */
+            font-size: 36px;
+            color: #d4af37;
         }
 
         header p {
-            margin-top: 8px;
+            margin-top: 10px;
             font-size: 16px;
             opacity: 0.9;
         }
 
         section {
-            padding: 40px 20px;
             max-width: 1000px;
-            margin: auto;
+            margin: 50px auto;
+            padding: 0 20px;
         }
 
         .radio-box {
             background-color: #132f4c;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            border-radius: 16px;
+            padding: 30px 25px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            text-align: center;
         }
 
         .radio-box h2 {
             margin-top: 0;
+            margin-bottom: 20px;
             color: #d4af37;
-            text-align: center;
+            font-size: 24px;
+        }
+
+        audio {
+            width: 100%;
+            margin: 15px 0;
         }
 
         footer {
-            background-color: #08131f;
-            text-align: center;
+            margin-top: 60px;
             padding: 15px;
+            text-align: center;
+            background-color: #050f1a;
             font-size: 14px;
             opacity: 0.8;
         }
@@ -68,21 +76,17 @@
         <p>Homens chamados para algo maior</p>
     </header>
 
-    <!-- SEÇÃO DA RÁDIO -->
+    <!-- RÁDIO -->
     <section>
         <div class="radio-box">
             <h2>🎙️ Rádio Laços de Fé FM</h2>
 
-            <iframe 
-                src="https://radiolacosdefefm.siteweb.net.br/player.html"
-                width="100%" 
-                height="150" 
-                frameborder="0" 
-                scrolling="no"
-                allow="autoplay">
-            </iframe>
+            <audio controls preload="none">
+                <source src="https://radiolacosdefefm.siteweb.net.br/stream" type="audio/mpeg">
+                Seu navegador não suporta rádio ao vivo.
+            </audio>
 
-            <p style="text-align:center; margin-top:15px;">
+            <p>
                 Palavra, louvor e conteúdo que fortalecem homens de fé.
             </p>
         </div>
