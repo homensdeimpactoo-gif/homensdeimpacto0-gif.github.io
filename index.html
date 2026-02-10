@@ -1,313 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Homens de Impacto</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homens de Impacto</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #0b1c2d;
+            color: #ffffff;
+        }
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        header {
+            background: linear-gradient(90deg, #0b1c2d, #132f4c);
+            padding: 20px;
+            text-align: center;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background:
-        radial-gradient(circle at top, #0b2a3f 0%, transparent 55%),
-        linear-gradient(to bottom, #02070c, #061a28, #02070c);
-      color: #ffffff;
-      overflow-x: hidden;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #d4af37; /* dourado */
+        }
 
-    /* HERO */
-    .hero {
-      position: relative;
-      height: 85vh;
-      background: url("hero-homens-impacto.png") center / cover no-repeat;
-    }
+        header p {
+            margin-top: 8px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(2,7,12,0.45),
-        rgba(2,7,12,0.92)
-      );
-    }
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
+        .radio-box {
+            background-color: #132f4c;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
 
-    .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      color: #f2d98c;
-      margin-bottom: 20px;
-      text-shadow: 0 6px 25px rgba(0,0,0,0.6);
-    }
+        .radio-box h2 {
+            margin-top: 0;
+            color: #d4af37;
+            text-align: center;
+        }
 
-    .hero-content p {
-      max-width: 750px;
-      font-size: 1.35rem;
-      line-height: 1.6;
-      margin-bottom: 40px;
-      color: #f2f2f2;
-      text-shadow: 0 4px 20px rgba(0,0,0,0.55);
-    }
-
-    /* BOTÃO (mantido só no hero) */
-    .btn {
-      padding: 16px 60px;
-      border-radius: 10px;
-      font-weight: 600;
-      text-decoration: none;
-      color: #111;
-      background: linear-gradient(135deg, #f2d98c, #d4af37);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.6);
-      transition: 0.3s;
-      display: inline-block;
-    }
-
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 55px rgba(0,0,0,0.85);
-    }
-
-    section {
-      padding: 100px 20px;
-      text-align: center;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      color: #f2d98c;
-      margin-bottom: 60px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* CARDS CLICÁVEIS */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: linear-gradient(to bottom, #081f30, #02070c);
-      padding: 35px 25px;
-      border-radius: 14px;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.6);
-      transition: all 0.4s ease;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 30px 70px rgba(0,0,0,0.9);
-    }
-
-    .card span {
-      font-size: 2.3rem;
-      display: block;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 10px;
-    }
-
-    .card-text {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: all 0.5s ease;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #dcdcdc;
-    }
-
-    .card.active .card-text {
-      max-height: 200px;
-      opacity: 1;
-      margin-top: 15px;
-    }
-
-    /* EVENTO */
-    .evento {
-      background: linear-gradient(to bottom, #061a28, #02070c);
-    }
-
-    .cartaz {
-      max-width: 420px;
-      margin: 0 auto 40px;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 18px 55px rgba(0,0,0,0.7);
-      transition: 0.4s;
-    }
-
-    .cartaz:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 30px 80px rgba(0,0,0,0.95);
-    }
-
-    .cartaz img {
-      width: 100%;
-      display: block;
-    }
-
-    .evento-info {
-      font-size: 1.25rem;
-      line-height: 2;
-      color: #e2e2e2;
-      margin-bottom: 20px;
-    }
-
-    footer {
-      padding: 35px 20px;
-      background: #02070c;
-      color: #bdbdbd;
-      font-size: 0.95rem;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .hero {
-        height: auto;
-        min-height: 100vh;
-        background-size: contain;
-        background-position: center top;
-        background-repeat: no-repeat;
-      }
-
-      .hero-content {
-        justify-content: flex-end;
-        padding-bottom: 70px;
-        background: linear-gradient(
-          to top,
-          rgba(2,7,12,0.85),
-          rgba(2,7,12,0.3),
-          transparent
-        );
-      }
-
-      .hero-content h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-content p {
-        font-size: 1.15rem;
-      }
-    }
-  </style>
+        footer {
+            background-color: #08131f;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-content">
-      <h1>Homens de Impacto</h1>
-      <p>
-        Homens despertados por Deus para viver com propósito, caráter e autoridade,
-        transformando famílias, igrejas e a sociedade.
-      </p>
-      <a href="#proposito" class="btn">Conheça o Propósito</a>
-    </div>
-  </div>
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Homens de Impacto</h1>
+        <p>Homens chamados para algo maior</p>
+    </header>
 
-  <!-- PROPÓSITO -->
-  <section id="proposito">
-    <h2 class="section-title">Nosso Propósito</h2>
+    <!-- SEÇÃO DA RÁDIO -->
+    <section>
+        <div class="radio-box">
+            <h2>🎙️ Rádio Laços de Fé FM</h2>
 
-    <div class="cards">
-      <div class="card">
-        <span>👨‍👩‍👧‍👦</span>
-        <h3>Fortalecer família e liderança</h3>
-        <div class="card-text">
-          O Homens de Impacto levanta homens que lideram primeiro dentro de casa,
-          assumindo responsabilidade espiritual, emocional e moral sobre sua família.
+            <iframe 
+                src="https://radiolacosdefefm.siteweb.net.br/player.html"
+                width="100%" 
+                height="150" 
+                frameborder="0" 
+                scrolling="no"
+                allow="autoplay">
+            </iframe>
+
+            <p style="text-align:center; margin-top:15px;">
+                Palavra, louvor e conteúdo que fortalecem homens de fé.
+            </p>
         </div>
-      </div>
+    </section>
 
-      <div class="card">
-        <span>✝️</span>
-        <h3>Crescimento espiritual e propósito</h3>
-        <div class="card-text">
-          Despertamos homens para uma caminhada profunda com Deus,
-          entendendo identidade, chamado e propósito no Reino.
-        </div>
-      </div>
-
-      <div class="card">
-        <span>💼</span>
-        <h3>Integridade na vida e no trabalho</h3>
-        <div class="card-text">
-          Acreditamos em homens íntegros, que vivem os mesmos valores
-          no altar, em casa e no ambiente profissional.
-        </div>
-      </div>
-
-      <div class="card">
-        <span>🔥</span>
-        <h3>Homens chamados para algo maior</h3>
-        <div class="card-text">
-          O projeto desperta homens para entender que suas vidas
-          fazem parte de algo maior do que si mesmos.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EVENTO -->
-  <section class="evento" id="evento">
-    <h2 class="section-title">Primeiro Encontro</h2>
-
-    <div class="cartaz">
-      <img src="cartaz-evento.png" alt="Cartaz do Evento Homens de Impacto">
-    </div>
-
-    <div class="evento-info">
-      <p>📅 28 de fevereiro de 2026</p>
-      <p>⏰ A partir das 19:00</p>
-      <p>📍 Av. Monteiro Lobato, 1283 – Guarulhos/SP</p>
-      <p>🎤 Pres.: Jair Cordeiro</p>
-    </div>
-  </section>
-
-  <footer>
-    Igreja As Nações Para Cristo
-  </footer>
-
-  <script>
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        card.classList.toggle('active');
-      });
-    });
-  </script>
+    <!-- RODAPÉ -->
+    <footer>
+        © 2026 – Projeto Homens de Impacto • Todos os direitos reservados
+    </footer>
 
 </body>
 </html>
