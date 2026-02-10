@@ -15,39 +15,71 @@
 
         header {
             background: linear-gradient(90deg, #0b1c2d, #132f4c);
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 32px;
-            color: #d4af37; /* dourado */
+            font-size: 34px;
+            color: #d4af37;
         }
 
         header p {
-            margin-top: 8px;
+            margin-top: 10px;
             font-size: 16px;
             opacity: 0.9;
         }
 
         section {
-            padding: 40px 20px;
-            max-width: 1000px;
+            padding: 50px 20px;
+            max-width: 1100px;
             margin: auto;
         }
 
-        .radio-box {
-            background-color: #132f4c;
+        .banner img,
+        .cartaz img {
+            width: 100%;
             border-radius: 12px;
-            padding: 25px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+        }
+
+        .radio-box,
+        .topicos,
+        .cartaz {
+            background-color: #132f4c;
+            border-radius: 14px;
+            padding: 30px;
             box-shadow: 0 0 20px rgba(0,0,0,0.4);
         }
 
-        .radio-box h2 {
+        .radio-box h2,
+        .topicos h2,
+        .cartaz h2 {
             margin-top: 0;
             color: #d4af37;
             text-align: center;
+        }
+
+        .topicos ul {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0 0 0;
+        }
+
+        .topicos li {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 17px;
+        }
+
+        .topicos li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
         }
 
         footer {
@@ -62,36 +94,73 @@
 
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <h1>Homens de Impacto</h1>
-        <p>Homens chamados para algo maior</p>
-    </header>
+<!-- CABEÇALHO -->
+<header>
+    <h1>Homens de Impacto</h1>
+    <p>Homens chamados para algo maior</p>
+</header>
 
-    <!-- SEÇÃO DA RÁDIO -->
-    <section>
-        <div class="radio-box">
-            <h2>🎙️ Rádio Laços de Fé FM</h2>
+<!-- BANNER HOMENS DE IMPACTO -->
+<section class="banner">
+    <!-- SUBSTITUA O SRC PELA IMAGEM REAL DO BANNER -->
+    <img src="https://via.placeholder.com/1200x400?text=Banner+Homens+de+Impacto" alt="Banner Homens de Impacto">
+</section>
 
-            <iframe 
-                src="https://radiolacosdefefm.siteweb.net.br/player.html"
-                width="100%" 
-                height="150" 
-                frameborder="0" 
-                scrolling="no"
-                allow="autoplay">
-            </iframe>
+<!-- TÓPICOS DO PROJETO -->
+<section>
+    <div class="topicos">
+        <h2>🔥 Nosso Propósito</h2>
+        <ul>
+            <li><strong>Fortalecer família e liderança</strong> — Homens posicionados no lar e na sociedade.</li>
+            <li><strong>Crescimento espiritual e propósito</strong> — Fé prática, madura e constante.</li>
+            <li><strong>Integridade na vida e no trabalho</strong> — Caráter acima de resultados.</li>
+            <li><strong>Homens chamados para algo maior</strong> — Uma geração que deixa legado.</li>
+        </ul>
+    </div>
+</section>
 
-            <p style="text-align:center; margin-top:15px;">
-                Palavra, louvor e conteúdo que fortalecem homens de fé.
-            </p>
-        </div>
-    </section>
+<!-- RÁDIO -->
+<section>
+    <div class="radio-box">
+        <h2>🎙️ Rádio Laços de Fé FM</h2>
 
-    <!-- RODAPÉ -->
-    <footer>
-        © 2026 – Projeto Homens de Impacto • Todos os direitos reservados
-    </footer>
+        <iframe 
+            src="https://radiolacosdefefm.siteweb.net.br/player.html"
+            width="100%" 
+            height="180" 
+            frameborder="0" 
+            scrolling="no"
+            allow="autoplay">
+        </iframe>
+
+        <p style="text-align:center; font-size:14px; opacity:0.8; margin-top:10px;">
+            ⚠️ Em alguns navegadores, clique no play dentro do player ou permita áudio.
+        </p>
+
+        <p style="text-align:center; margin-top:15px;">
+            Palavra, louvor e conteúdo que fortalecem homens de fé.
+        </p>
+    </div>
+</section>
+
+<!-- CARTAZ DO EVENTO -->
+<section>
+    <div class="cartaz">
+        <h2>📅 Próximo Encontro</h2>
+
+        <!-- SUBSTITUA O SRC PELO CARTAZ REAL DO EVENTO -->
+        <img src="https://via.placeholder.com/900x1200?text=Cartaz+do+Evento+Homens+de+Impacto" alt="Cartaz do Evento Homens de Impacto">
+
+        <p style="text-align:center; margin-top:15px;">
+            Participe e venha viver um tempo de transformação e alinhamento espiritual.
+        </p>
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+    © 2026 – Projeto Homens de Impacto • Todos os direitos reservados
+</footer>
 
 </body>
 </html>
